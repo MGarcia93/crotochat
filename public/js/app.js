@@ -22,6 +22,6 @@ pushMensaje.onclick=(e)=>{
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);   
+    //firebase.initializeApp(firebaseConfig);   
     comprobarUsuario();
 });

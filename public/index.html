@@ -5,15 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CrotoChat</title>
-
-  <!-- update the version number as needed -->
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
-
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -36,7 +27,19 @@
         <button id="pushMensaje">Enviar mensaje</button>
       </div>
     </div>
-    <script src="./js/config.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.3.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.3.2/firebase-analytics.js"></script>
+    <script src="/__/firebase/8.3.1/firebase-auth.js"></script>
+    <script src="/__/firebase/8.3.1/firebase-database.js"></script>
+
+
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
     <script src="./js/app.js" type="module"></script>
   </div>
 
