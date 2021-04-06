@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrotoChat</title>
+
+  <!-- update the version number as needed -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase.js"></script>
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+
+  <style media="screen">
+    body {
+      background: #ECEFF1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #main {
+      background: white;
+      max-width: 360px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #main h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+      text-align: center;
+    }
+
+    #main h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #main p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #main a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #main,
+    #main a {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    #load {
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+
+      body,
+      #main {
+        margin-top: 0;
+        background: white;
+        box-shadow: none;
+      }
+
+      body {
+        border-top: 16px solid #ffa100;
+      }
+
+    }
+
+    .off {
+      display: none !important;
+    }
+
+    #avatar {
+      border-radius: 50%;
+      margin: auto;
+      display: block;
+      max-width: 100px;
+    }
+
+    #listMessages {
+      text-align: left;
+      list-style: none;
+      height: 200px;
+      overflow: auto;
+      padding: 5px;
+    }
+    #listMessages li{
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="main">
+    <img src="./img/avatar.jpg" id="avatar">
+    <h2 id="name">Bienvenido</h2>
+    <p id="email">Crotochat: Un chat echo para aprender a usar firebase</p>
+    <div class="botonera">
+      <a id="login">Entrar a CrotoChat</a>
+      <a id="logout" class="off">Salir de CrotoChat</a>
+    </div>
+    <div id="messages" class="off">
+      <ul id="listMessages">
+        <li><strong>Maxi:</strong>hola</li>
+      </ul>
+      <div class="form">
+        <input type="text" name="" id="txtMessage" placeholder="escribi tu mensaje">
+        <button id="pushMensaje">enviar mensaje</button>
+      </div>
+    </div>
+    <script src="./js/config.js"></script>
+    <script src="./js/app.js" type="module"></script>
+  </div>
+
+</body>
+
+</html>
