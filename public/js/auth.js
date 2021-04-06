@@ -34,7 +34,7 @@ const init = () => {
     avatar.src = "./img/avatar.jpg";
     name.innerText = "Bienvenido";
     email.innerText = "Crotochat: Un chat echo para aprender a usar firebase";
-    mensajes.classList.add("off");
+    messages.classList.add("off");
     btnLogout.classList.add("off");
     btnLogin.classList.remove("off");
 }
@@ -44,8 +44,7 @@ const lokearUsuario = () => {
     email.innerText = user.email;
     messages.classList.remove("off");
     btnLogout.classList.remove("off");
-    btnLogin.classList.add("off");    
-    actulizarLista();
+    btnLogin.classList.add("off");  
 }
 export const comprobarUsuario = () => {
     firebase.auth().onAuthStateChanged((userLog) => {
@@ -57,5 +56,6 @@ export const comprobarUsuario = () => {
             // No user is signed in.
             init();
         }
-    });
+    });      
+    actulizarLista();
 }

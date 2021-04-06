@@ -25,8 +25,10 @@ export const actulizarLista = ()=>{
     const db = firebase.database();
     db.ref("mensajes").on("child_added",(record)=>{
         list.innerHTML+=`<li>
-            <strong>${record.val().name} :</strong>${record.val().text}</strong>
+            <strong><img src="${record.val().avatar}" class="cycle">${record.val().name} :</strong>${record.val().text}</strong>
         </li>`
+        let last = list.querySelector("li:last-child");
         console.log(record.val());
+        last.scrollIntoView();
     });
 }
